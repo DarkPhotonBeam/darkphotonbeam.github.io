@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>photon-generator</title><link rel="stylesheet" type="text/css" href="/css/github-night.css" /></head><body><main><h1 id="photongenerator">photon-generator</h1>
+<h2 id="installation">Installation</h2>
+<p>Either execute directly using </p>
+<pre><code class="shell language-shell">npx photon-generator
+</code></pre>
+<p>or clone and build yourself.</p>
+<h3 id="howtobuild">How to build:</h3>
+<pre><code class="shell language-shell">npm install &amp;&amp; npm run compile
+</code></pre>
+<p>Afterwards executable is found at <code>build/src/index.js</code>.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="examplefolderstructure">Example Folder structure</h3>
+<ul>
+<li>index.html</li>
+<li>meta.json</li>
+<li>blog/</li>
+<li>first-post/<ul>
+<li>first-post.md</li>
+<li>meta.json</li></ul></li>
+<li>second-post/<ul>
+<li>foo.html</li></ul></li>
+<li>whatever/<ul>
+<li>idontcare.md</li></ul></li>
+<li>about/</li>
+<li>aboutme.html</li>
+<li>meta.json</li>
+<li>style.css</li>
+<li>assets/</li>
+<li>portrait.jpg</li>
+</ul>
+<h3 id="examplemetajson">Example meta.json</h3>
+<pre><code class="json language-json">{
+  "title": "A very cool page",
+  "name": "Cool Page",
+  "keywords": "cool,very cool,the coolest",
+  "description": "The very coolest site."
+}
+</code></pre>
+<p>Every keyword is optional.
+"title" generates to <title>, i.e. the title of your tab.
+"name" describes what a link linking to this page should be called in auto-generated navigation. "keywords" and "description" are for SEO.</p>
+<h2 id="comingsoon">Coming Soon</h2>
+<ul>
+<li>Custom Global Styling</li>
+<li>Custom per page styling</li>
+<li>Nav overrides</li>
+</ul></main></body></html>
