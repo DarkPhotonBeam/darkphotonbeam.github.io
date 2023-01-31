@@ -194,6 +194,18 @@ content {
     background-color: var(--bg-color) !important;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  max-width: 80ch;
+}
+
 /*.md-end-block.md-heading.md-focus {
   color: #afe61d;
 }*/
