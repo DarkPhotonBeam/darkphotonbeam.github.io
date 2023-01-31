@@ -1,3 +1,3 @@
 # ben
 
-[ben](/assets/ben.jpeg)
+![ben](/assets/ben.jpeg)
