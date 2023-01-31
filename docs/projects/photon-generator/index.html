@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head><title>photon-generator</title><link rel="stylesheet" type="text/css" href="/css/github-night.css" /></head><body><main><h1 id="photongenerator">photon-generator</h1>
+<p><a href="https://github.com/DarkPhotonBeam/photon-generator">Repository</a></p>
 <h2 id="installation">Installation</h2>
-<p>Either execute directly using </p>
+<p>Either execute directly using</p>
 <pre><code class="shell language-shell">npx photon-generator
+</code></pre>
+<p>or install using </p>
+<pre><code class="shell language-shell">npm i -g photon-generator
 </code></pre>
 <p>or clone and build yourself.</p>
 <h3 id="howtobuild">How to build:</h3>
@@ -12,23 +16,27 @@
 <h2 id="usage">Usage</h2>
 <h3 id="examplefolderstructure">Example Folder structure</h3>
 <ul>
+<li>.</li>
+<li>pages/</li>
 <li>index.html</li>
 <li>meta.json</li>
-<li>blog/</li>
-<li>first-post/<ul>
+<li>blog/<ul>
+<li>first-post/</li>
 <li>first-post.md</li>
-<li>meta.json</li></ul></li>
-<li>second-post/<ul>
-<li>foo.html</li></ul></li>
-<li>whatever/<ul>
+<li>meta.json</li>
+<li>second-post/</li>
+<li>foo.html</li>
+<li>whatever/</li>
 <li>idontcare.md</li></ul></li>
-<li>about/</li>
+<li>about/<ul>
 <li>aboutme.html</li>
 <li>meta.json</li>
-<li>style.css</li>
-<li>assets/</li>
-<li>portrait.jpg</li>
+<li>style.css</li></ul></li>
+<li>assets/<ul>
+<li>portrait.jpg</li></ul></li>
 </ul>
+<p>Each folder represents a route. A folder can have at max one .html or .md file which describes the body of that route.
+meta.json is for metadata. All media like pictures should be stored in the assets/ folder. pages/ is your root folder, i.e. "index.html". pages/ cannot be renamed, photon-generator searches for a pages/ directory on execution.</p>
 <h3 id="examplemetajson">Example meta.json</h3>
 <pre><code class="json language-json">{
   "title": "A very cool page",
