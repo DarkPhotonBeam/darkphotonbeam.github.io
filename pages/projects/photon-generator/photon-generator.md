@@ -1,6 +1,31 @@
-# photon-generator
+# [photon-generator](https://github.com/DarkPhotonBeam/photon-generator)
+###### v0.0.4
 
-[Repository](https://github.com/DarkPhotonBeam/photon-generator)
+## Newest Features
+
+### Auto-Regen
+
+Let photon-generator automatically regenerate your build on file changes! Just run the command with the --watch flag and photon-generator will poll for changes and regenerate when a change has been made!
+```shell
+photon-generator --watch
+```
+or
+```shell
+photon-generator -w
+```
+
+The polling interval in ms can be changed using --pollingRate or -pr (default: 1000ms)
+```shell
+photon-generator -w -pr 100
+```
+
+### Local Web Server
+
+Using --serve you can look at your build in the browser on your local machine.
+
+### New Default Styles
+
+I am rebuilding the default styles from the ground up. Latest version features cleaner margins and layouts, nicer and responsive menu, code highlighting and LaTeX support.
 
 ## Installation
 
@@ -8,7 +33,7 @@ Either execute directly using
 ```shell
 npx photon-generator
 ```
-or install using 
+or install using
 ```shell
 npm i -g photon-generator
 ```
@@ -58,7 +83,7 @@ meta.json is for metadata. All media like pictures should be stored in the asset
 ```
 
 Every keyword is optional.
-"title" generates to <title>, i.e. the title of your tab.
+"title" generates to the title of your tab.
 "name" describes what a link linking to this page should be called in auto-generated navigation. "keywords" and "description" are for SEO.
 
 ## Coming Soon
@@ -66,4 +91,4 @@ Every keyword is optional.
 * Custom Global Styling
 * Custom per page styling
 * Nav overrides
-
+* Pre-built and custom in-md-components

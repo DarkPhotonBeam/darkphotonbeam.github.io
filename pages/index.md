@@ -1,3 +1,12 @@
 # darkphotonbeam.github.io
 
-Welcome to my homepage.
+
+
+```typescript
+function hello(msg: string): string {
+    console.log(msg);
+    return msg;
+}
+
+hello("Welcome to my homepage.");
+```

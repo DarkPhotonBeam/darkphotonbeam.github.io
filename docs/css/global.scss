@@ -1,0 +1,459 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+/*
+Theme Name: GitHub Night
+Theme URI: https://github.com/kinoute/typora-github-night-theme
+Authors: Yann Defretin, GitHub Team
+Author URI: https://github.com/kinoute
+Description: Typora themes that reproduces GitHub Dark Color Schemes.
+Version: 0.6.2
+Tags: dark, github, typora
+*/
+
+/* nunito-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-italic - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-800 - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/nunito-sans-v6-latin-ext_latin-800.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-800italic - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* Use a special font for code blocks just like GitHub */
+@font-face {
+  font-family: "SFMono-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF Mono Regular"),
+    url("./fonts/SFMonoSemibold.woff") format("woff");
+}
+
+:root {
+  --bg-color: #0D1116;
+  --text-color: #c9d1d9;
+  --link-color: #58a6ff;
+  --subtitle-color: #8B949E;
+  --heading-font: "Jost", sans-serif;
+  --text-font: "Nunito", sans-serif;
+  --root-font-size: 20px;
+  --code-font: "Roboto Mono", "Fira Code", "SFMono-Regular", monospace;
+  --box-color: #161B22;
+  --border-color: #21262d;
+  --nav-link-color: var(--subtitle-color);
+  --nav-link-hover-color: var(--text-color);
+}
+
+html, body {
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--text-font);
+  font-size: var(--root-font-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  max-width: 80ch;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+ul, pre {
+  margin-bottom: 2rem;
+}
+
+ul ul {
+  margin-bottom: 0;
+}
+
+p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+  text-align: justify;
+  orphans: 4;
+  //font-weight: 100;
+}
+
+pre {
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  //margin-top: -1rem;
+  background-color: var(--box-color);
+}
+
+pre, code {
+  font-family: var(--code-font);
+  font-size: 1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  position: relative;
+
+  &::before {
+    color: var(--border-color);
+    position: absolute;
+    right: 0; // calc(100% + 1rem)
+  }
+}
+
+h6 {
+  color: var(--subtitle-color);
+}
+
+h2, h1 {
+  margin-top: 4rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1800px) {
+  h1::before {
+    content: "#";
+  }
+
+  h2::before {
+    content: "##";
+  }
+
+  h3::before {
+    content: "###";
+  }
+
+  h4::before {
+    content: "####";
+  }
+
+  h5::before {
+    content: "#####";
+  }
+
+  h6::before {
+    content: "######";
+  }
+}
+
+h1:first-of-type {
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  a {
+    color: var(--text-color);
+  }
+  &::before {
+    content: "";
+  }
+}
+
+h6:first-of-type {
+  text-align: center;
+  &::before {
+    content: "";
+  }
+}
+
+pre code.hljs {
+  background: none;
+  padding: 0;
+}
+
+pre p:last-child {
+  margin-bottom: 0;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 150ms ease-in-out;
+  border-color: var(--border-color);
+  z-index: 150;
+  @media only screen and (min-width: 1800px) {
+    display: none;
+  }
+
+
+  &.opaque {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+}
+
+$scaleX: 1;
+$translate: 0.75rem - .125rem;
+$time: 200ms;
+
+.hamburger {
+  height: 1.5rem;
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+
+  .bar-1, .bar-2, .bar-3 {
+    height: .25rem;
+    width: 100%;
+    opacity: 1;
+    background: var(--text-color);
+    transition: all $time ease-in-out;
+    transform-origin: 50% 50%;
+  }
+
+  &.close {
+    .bar-1 {
+      //animation: openHamburgerBar1 $time ease-in-out 0ms 1 reverse none;
+    }
+
+    .bar-3 {
+      //animation: openHamburgerBar3 $time ease-in-out 0ms 1 reverse none;
+    }
+  }
+
+  &.open {
+    //background: lime;
+
+
+    .bar-1 {
+      //transform: rotate(45deg) scaleX($scaleX) translateY($translate);
+      animation: openHamburgerBar1 $time ease-in-out 0ms 1 normal forwards;
+    }
+
+    .bar-2 {
+      //opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .bar-3 {
+      animation: openHamburgerBar3 $time ease-in-out 0ms 1 normal forwards;
+      //transform: rotate(-45deg) scaleX($scaleX) translateY(-$translate);
+
+      //transform-origin: 0 0;
+    }
+  }
+}
+
+@keyframes openHamburgerBar1 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY($translate) rotate(0);
+  }
+
+  100% {
+    transform: translateY($translate) rotate(45deg);
+  }
+}
+
+@keyframes openHamburgerBar3 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-$translate) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-$translate) rotate(-45deg);
+  }
+}
+
+p img {
+  max-width: 100%;
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  padding: 2rem 4rem;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+
+
+  align-items: center;
+  background: var(--bg-color);
+  flex-direction: column;
+  //border-right: 1px solid var(--border-color);
+  transform: scale(0);
+  transition: all $time ease-in-out;
+  border-radius: 50%;
+  opacity: 0;
+
+
+  &.open {
+    transform: scale(1);
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  @media only screen and (min-width: 1800px) {
+    width: auto;
+    opacity: 1;
+    border-radius: 0;
+    transform: scale(1);
+
+  }
+
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      margin: 2rem 0;
+      font-size: 2rem;
+      @media only screen and (min-width: 1800px) {
+        font-size: 1.25rem;
+      }
+
+      a {
+        color: var(--nav-link-color);
+
+        &:hover {
+          color: var(--nav-link-hover-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

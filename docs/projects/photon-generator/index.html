@@ -1,56 +1,133 @@
+
 <!DOCTYPE html>
-<html lang="en"><head><title>photon-generator</title><link rel="stylesheet" type="text/css" href="/css/github-night.css" /></head><body><main><h1 id="photongenerator">photon-generator</h1>
-<p><a href="https://github.com/DarkPhotonBeam/photon-generator">Repository</a></p>
+<html lang="en">
+  <head>
+    <title>photon-generator</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+    
+    <main><h1 id="photon-generator"><a href="https://github.com/DarkPhotonBeam/photon-generator">photon-generator</a></h1>
+<h6 id="v004">v0.0.4</h6>
+<h2 id="newest-features">Newest Features</h2>
+<h3 id="auto-regen">Auto-Regen</h3>
+<p>Let photon-generator automatically regenerate your build on file changes! Just run the command with the --watch flag and photon-generator will poll for changes and regenerate when a change has been made!</p>
+<pre><code class="language-shell">photon-generator --watch
+</code></pre>
+<p>or</p>
+<pre><code class="language-shell">photon-generator -w
+</code></pre>
+<p>The polling interval in ms can be changed using --pollingRate or -pr (default: 1000ms)</p>
+<pre><code class="language-shell">photon-generator -w -pr 100
+</code></pre>
+<h3 id="local-web-server">Local Web Server</h3>
+<p>Using --serve you can look at your build in the browser on your local machine.</p>
+<h3 id="new-default-styles">New Default Styles</h3>
+<p>I am rebuilding the default styles from the ground up. Latest version features cleaner margins and layouts, nicer and responsive menu, code highlighting and LaTeX support.</p>
 <h2 id="installation">Installation</h2>
 <p>Either execute directly using</p>
-<pre><code class="shell language-shell">npx photon-generator
+<pre><code class="language-shell">npx photon-generator
 </code></pre>
-<p>or install using </p>
-<pre><code class="shell language-shell">npm i -g photon-generator
+<p>or install using</p>
+<pre><code class="language-shell">npm i -g photon-generator
 </code></pre>
 <p>or clone and build yourself.</p>
-<h3 id="howtobuild">How to build:</h3>
-<pre><code class="shell language-shell">npm install &amp;&amp; npm run compile
+<h3 id="how-to-build">How to build:</h3>
+<pre><code class="language-shell">npm install &amp;&amp; npm run compile
 </code></pre>
 <p>Afterwards executable is found at <code>build/src/index.js</code>.</p>
 <h2 id="usage">Usage</h2>
-<h3 id="examplefolderstructure">Example Folder structure</h3>
+<h3 id="example-folder-structure">Example Folder structure</h3>
 <ul>
 <li>.</li>
-<li>pages/</li>
+<li>pages/<ul>
 <li>index.html</li>
 <li>meta.json</li>
 <li>blog/<ul>
-<li>first-post/</li>
+<li>first-post/<ul>
 <li>first-post.md</li>
 <li>meta.json</li>
-<li>second-post/</li>
+</ul>
+</li>
+<li>second-post/<ul>
 <li>foo.html</li>
-<li>whatever/</li>
-<li>idontcare.md</li></ul></li>
+</ul>
+</li>
+<li>whatever/<ul>
+<li>idontcare.md</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>about/<ul>
 <li>aboutme.html</li>
 <li>meta.json</li>
-<li>style.css</li></ul></li>
+<li>style.css</li>
+</ul>
+</li>
 <li>assets/<ul>
-<li>portrait.jpg</li></ul></li>
+<li>portrait.jpg</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p>Each folder represents a route. A folder can have at max one .html or .md file which describes the body of that route.
-meta.json is for metadata. All media like pictures should be stored in the assets/ folder. pages/ is your root folder, i.e. "index.html". pages/ cannot be renamed, photon-generator searches for a pages/ directory on execution.</p>
-<h3 id="examplemetajson">Example meta.json</h3>
-<pre><code class="json language-json">{
-  "title": "A very cool page",
-  "name": "Cool Page",
-  "keywords": "cool,very cool,the coolest",
-  "description": "The very coolest site."
+meta.json is for metadata. All media like pictures should be stored in the assets/ folder. pages/ is your root folder, i.e. &quot;index.html&quot;. pages/ cannot be renamed, photon-generator searches for a pages/ directory on execution.</p>
+<h3 id="example-metajson">Example meta.json</h3>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;A very cool page&quot;,
+  &quot;name&quot;: &quot;Cool Page&quot;,
+  &quot;keywords&quot;: &quot;cool,very cool,the coolest&quot;,
+  &quot;description&quot;: &quot;The very coolest site.&quot;
 }
 </code></pre>
 <p>Every keyword is optional.
-"title" generates to <title>, i.e. the title of your tab.
-"name" describes what a link linking to this page should be called in auto-generated navigation. "keywords" and "description" are for SEO.</p>
-<h2 id="comingsoon">Coming Soon</h2>
+&quot;title&quot; generates to the title of your tab.
+&quot;name&quot; describes what a link linking to this page should be called in auto-generated navigation. &quot;keywords&quot; and &quot;description&quot; are for SEO.</p>
+<h2 id="coming-soon">Coming Soon</h2>
 <ul>
 <li>Custom Global Styling</li>
 <li>Custom per page styling</li>
 <li>Nav overrides</li>
-</ul></main></body></html>
+<li>Pre-built and custom in-md-components</li>
+</ul>
+</main>
+    <script>window.texme = { style: 'none' }</script>
+     <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <header class="header">
+        <div class="hamburger" onclick="toggleHamburger()">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+        </div>    
+    </header>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        function toggleHamburger() {
+            if (document.querySelector(".hamburger").classList.contains("open")) {
+                document.querySelector(".hamburger").classList.remove("open");
+                document.querySelector(".aside").classList.remove("open");
+                document.querySelector(".hamburger").classList.add("close");
+            }
+            else {
+                document.querySelector(".hamburger").classList.remove("close");
+                document.querySelector(".hamburger").classList.add("open");
+                document.querySelector(".aside").classList.add("open");
+            }
+        }
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY > 0 && !document.querySelector(".header").classList.contains("opaque")) {
+                document.querySelector(".header").classList.add("opaque");
+            } else if (window.scrollY === 0 && document.querySelector(".header").classList.contains("opaque")) {
+                document.querySelector(".header").classList.remove("opaque");
+            }
+        });
+    </script>
+</body>
+</html>
